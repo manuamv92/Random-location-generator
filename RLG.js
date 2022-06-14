@@ -32,17 +32,21 @@ const dSimpleFinds = ['copper bowl', 'copper plate', 'copper mug', 'water skin',
 const dValuableFinds  = ['glass bowl','painting', 'silver box', 'pearl', 'silver mug', 'silver bracelet', 'silver ring', 'silver necklace', 'well tailored cloack with a silver buckle', 'drinking horn with with silver details', 'really elegant helmet', 'rare book', 'gemstone', 'silver headband', 'silver crown'];
 const dPreciousFinds  = ['golden necklace', 'golden ring', 'fur cloak with an expensive embroidery and golden buckle', 'pair of dragonscale boots', 'pair of velvet gloves', 'golden helmet', 'golden armor', 'golden shield', 'rare gemstone', 'ring with a huge gemstone'];
 const dFindsOddity  = ['is kinda scratched', 'contains the soul of its previous owner and speaks to the adventurer by nigth', 'actually has a really excentric shape', 'is heavily perfumed', 'is very small for a human', 'is unaturally big', 'was built by elves', 'was built by dwarves', 'is haunted by an unhappy ghost', 'smell like rotten flesh', ' is probably very old', 'looks like is probably cursed', 'smells like cinnamon', 'tastes like strawberries if you lick it', 'your hand feels numb when holding it'];
+
+
 //those are the arrays who contain the pieces of the castle//
 
 
-
-
-
-
-
-
-
-
+const cType = ['outpost', 'blockhouse', 'tower', 'fort', 'keep', 'fortress', 'palace'];
+const cAge = ['something between 300 and 1000 years old', 'something between 100 and 300 years old', 'something between 50 and 100 years old', 'freshly built'];
+const cPurpose = ['living quarters', 'a trade', 'a guard resource', 'a prison', 'a display of power']
+const cBuilder = ['elf', 'dwarf', 'trader', 'treasure hunter', 'priest', 'sorcerer', 'bandit chief', 'noble'];
+const cBuilderAdjetive = ['bloodthisty', 'greedy', 'cruel', 'glorious', 'rich', 'mad', 'evil', 'vanidous'];
+const cHistory = ['it was ravaged by fire', 'it was beset by by a long and bloody siege', 'it was afflicted by the plage', 'it fell during a revolt', 'something tragic happened here']
+const cInhabitants = ['the a few descendants of the builders', 'the descendants of the builders', 'a ghoul', 'anyone, but is haunted', 'a giant monster', 'Sorcerers', 'bandits', 'slave traders', 'orcs', 'goblins', 'giant spiders', 'dwarves', 'saurians', 'ogres', 'undeads', 'ghosts', 'insectoids', 'minotaurs', 'demons', 'a dragon', 'a manticore', 'an hydra'];
+const cOddity = ['really weirdly shaped', 'blood colored', 'built on top of a massive rock', 'covered with weird inscriptions', 'surrounded by crows', 'surrounded by graves', 'surrounded by a putrid smell', 'covered in purple flowers', 'built around an ancient statue', 'built over a fungal field', 'decorated with skulls'];
+const cName1 = ['Stone', 'Red', 'Purple', 'Blood', 'Dead', 'Winter', 'Oak', 'Blue', 'Snow', 'Wind', 'Storm', 'Fire', 'Rust', 'Griffon', 'Dark', 'Dim', 'Wood', 'Barren', 'Deep', 'Alder', 'Rain', 'Eagle', 'Wolf', 'Bear', 'Dragon', 'Frost', 'Night', 'Rose', 'Fang', 'River', 'Sea', 'Ice', 'Sun', 'Moon', 'Wolf', 'Twilight']
+const cName2 = ['Hook', 'Toorh', 'Spire', 'House', 'Claw', 'Jaw', 'Water', 'Redoubt', 'Mound', 'Hill', 'Mountain', 'Tower', 'Edge', 'Home', 'Cliff', 'Pike', 'Eye', 'Hole', 'Gap', 'Shield', 'Nest', 'Mark', 'Grove', 'Glade', 'Keep', 'Fortress', 'Castle', 'Keep', 'Lair', 'Stone', 'Den', 'Wall', 'Mound', 'Mark', 'Fort']
 
 
 //main function// 
@@ -56,8 +60,10 @@ if (variable === "village") {
     console.log(`After a long walk along the trail, the party discovered a ${vSize[Math.floor(Math.random() * vSize.length)]}, the name of the village seems to be ${vName[Math.floor(Math.random() * vName.length)]}, judging by the shape of the buildings, the village must be ${vAge[Math.floor(Math.random() * vAge.length)]}, this village is specially well known in the region for ${vClaim[Math.floor(Math.random() * vClaim.length)]}, but is also famous for ${vOddity[Math.floor(Math.random() * vOddity.length)]}, in this village there is also an Inn, "${vInnName1[Math.floor(Math.random() * vInnName1.length)]} ${vInnName2[Math.floor(Math.random() * vInnName2.length)]} ", if you enter this Inn ${vInnOddity[Math.floor(Math.random() * vInnOddity.length)]}, ${vInnSpeciality[Math.floor(Math.random() * vInnSpeciality.length)]}, if you look closer to each of the regulars, you notice ${vInnGuest[Math.floor(Math.random() * vInnGuest.length)]}; apparently, in this village, ${vProblem[Math.floor(Math.random() * vProblem.length)]}, and their ruler, a ${vRulerOddity[Math.floor(Math.random() * vRulerOddity.length)]} ${vRulerType[Math.floor(Math.random() * vRulerType.length)]} is not really dealing with the problem. Would the party stop by and try to help this humble people?`)
 } else if (variable === "dungeon") {
     console.log(`${dEntrance[Math.floor(Math.random() * dEntrance.length)]}, if they enter, they will find ${dSize[Math.floor(Math.random() * dSize.length)]}, the first thing they will notice once inside is that ${dOddity[Math.floor(Math.random() * dOddity.length)]}, and also that it used to be a ${dPurpose[Math.floor(Math.random() * dPurpose.length)]}, acording to the style probably built by ${dCreator[Math.floor(Math.random() * dCreator.length)]}, the building must be ${dAge[Math.floor(Math.random() * dAge.length)]}, if they keep investigating and following the clues, sooner or later they will discover also that ${dHistory[Math.floor(Math.random() * dHistory.length)]}, but also, that now the dungeon is inhabited by ${dInhabitants[Math.floor(Math.random() * dInhabitants.length)]}, if they survive the encounters and avoid the ${dTraps[Math.floor(Math.random() * dTraps.length)]}, the ${dTraps[Math.floor(Math.random() * dTraps.length)]} and the ${dTraps[Math.floor(Math.random() * dTraps.length)]}, they will found a chest with ${Math.floor(Math.random() * 1000)} pieces of gold, and several other objects; a ${dSimpleFinds[Math.floor(Math.random() * dSimpleFinds.length)]}, a ${dSimpleFinds[Math.floor(Math.random() * dSimpleFinds.length)]} and a ${dSimpleFinds[Math.floor(Math.random() * dSimpleFinds.length)]} that ${dFindsOddity[Math.floor(Math.random() * dFindsOddity.length)]}, also a ${dValuableFinds[Math.floor(Math.random() * dValuableFinds.length)]} and a ${dValuableFinds[Math.floor(Math.random() * dValuableFinds.length)]} that ${dFindsOddity[Math.floor(Math.random() * dFindsOddity.length)]}, and finally a ${dPreciousFinds[Math.floor(Math.random() * dPreciousFinds.length)]} that ${dFindsOddity[Math.floor(Math.random() * dFindsOddity.length)]}`)
+} else if (variable === "castle") {console.log(``)
+
 } else {
-    console.log('It is only possible to generate villages and dungeons at this moment')
+    console.log('Please, use village, dungeon or castle as a parameter')
 }
 
 };
